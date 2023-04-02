@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.ActiveTokenController">
+   <children>
+      <TableView layoutX="26.0" fx:id="tableView" layoutY="14.0" prefHeight="367.0" prefWidth="411.0">
+        <columns>
+          <TableColumn prefWidth="410.0" fx:id="tokenID" text="Aktivni tokeni" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
