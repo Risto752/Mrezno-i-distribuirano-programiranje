@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="generateToken">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+      <element name="surname" type="xsd:string"/>
+      <element name="JMB" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="generateTokenResponse">
+    <complexType>
+     <sequence>
+      <element name="generateTokenReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="verifyToken">
+    <complexType>
+     <sequence>
+      <element name="tokenParam" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="verifyTokenResponse">
+    <complexType>
+     <sequence>
+      <element name="verifyTokenReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getId">
+    <complexType>
+     <sequence>
+      <element name="tokenParam" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getIdReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getIdRequest">
+
+      <wsdl:part element="impl:getId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyTokenRequest">
+
+      <wsdl:part element="impl:verifyToken" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyTokenResponse">
+
+      <wsdl:part element="impl:verifyTokenResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdResponse">
+
+      <wsdl:part element="impl:getIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="generateTokenRequest">
+
+      <wsdl:part element="impl:generateToken" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="generateTokenResponse">
+
+      <wsdl:part element="impl:generateTokenResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Token_server">
+
+      <wsdl:operation name="generateToken">
+
+         <wsdl:input message="impl:generateTokenRequest" name="generateTokenRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:generateTokenResponse" name="generateTokenResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyToken">
+
+         <wsdl:input message="impl:verifyTokenRequest" name="verifyTokenRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:verifyTokenResponse" name="verifyTokenResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdl:input message="impl:getIdRequest" name="getIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIdResponse" name="getIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="Token_serverSoapBinding" type="impl:Token_server">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="generateToken">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="generateTokenRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="generateTokenResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyToken">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="verifyTokenRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="verifyTokenResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="Token_serverService">
+
+      <wsdl:port binding="impl:Token_serverSoapBinding" name="Token_server">
+
+         <wsdlsoap:address location="http://localhost:8080/TokenServer/services/Token_server"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
