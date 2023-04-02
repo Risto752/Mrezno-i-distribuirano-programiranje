@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.PrikaziSesije">
+   <children>
+      <TableView  fx:id="tableView" layoutX="51.0" layoutY="43.0" prefHeight="330.0" prefWidth="346.0">
+        <columns>
+          <TableColumn fx:id="SesijaID" prefWidth="75.0" text="Sesija(ID)" />
+          <TableColumn fx:id="Pocetak" prefWidth="75.0" text="Pocetak" />
+            <TableColumn fx:id="Kraj" prefWidth="75.0" text="Kraj" />
+            <TableColumn fx:id="Trajanje" prefWidth="120.0" text="Trajanje(sekunde)" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
